@@ -100,6 +100,17 @@ console.log(finaldatecorrectformat);
 date = new Date(finaldatecorrectformat); 
 console.log(date);
 
+
+result = date.setDate(date.getDate()  - 1);
+console.log(result);
+
+dateObject = new Date(result);
+
+humanDateFormat = dateObject.toLocaleString();
+
+console.log(humanDateFormat);
+
+
 		/*E.g. If we pass as an argument the following string 'Feb 23, 2017'  the program should output 'Wed Feb 22 2017'
 -> convert a string to a date that's readable to the program
 
