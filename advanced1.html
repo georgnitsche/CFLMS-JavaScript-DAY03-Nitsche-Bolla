@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		
+
+	function timeConvert(n) {
+		var num = n;
+		var hours = (num / 60);
+		var resHours = Math.floor(hours);
+		var minutes = (hours - resHours) * 60;
+		var resMin = Math.round(minutes);
+		
+		return num + " minutes = " + resHours + " hour(s) and " + resMin + " minute(s).";
+		}
+
+	document.write(timeConvert(350));
+
+	</script>
+
+</body>
+</html>
