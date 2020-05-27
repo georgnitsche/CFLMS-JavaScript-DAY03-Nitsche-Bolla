@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+enterdate = window.prompt("Enter date in the format 'Feb 23, 2017'").toString();
+month = enterdate.substring(0,3);
+
+switch (month) {
+   case 'Jan':
+       monthnumber = "01";
+       console.log(monthnumber);
+       break;
+   case 'Feb':
+       monthnumber = '02';
+       console.log(monthnumber);
+       break;
+   case 'Mar':
+       monthnumber = '03';
+       console.log(monthnumber);
+       break;
+   case 'Apr':
+       monthnumber = '04';
+       console.log(monthnumber);
+       break;
+   case 'May':
+       monthnumber = '05';
+       console.log(monthnumber);
+       break;
+   case 'Jun':
+       monthnumber = '06';
+       console.log(monthnumber);
+       break;
+   case 'Jul':
+       monthnumber = '07';
+       console.log(monthnumber);
+       break;
+   case 'Aug':
+       monthnumber = '08';
+       console.log(monthnumber);
+       break;
+   case 'Sep':
+       monthnumber = '09';
+       console.log(monthnumber);
+       break;
+   case 'Oct':
+       monthnumber = '10';
+       console.log(monthnumber);
+       break;
+   case 'Nov':
+       monthnumber = '11';
+       console.log(monthnumber);
+       break;   
+   case 'Dec':
+       monthnumber = '12';
+       console.log(monthnumber);
+       break;
+
+
+   default:
+       monthnumber = "Incorrect month format";
+       console.log(monthnumber);
+       break;
+}
+/*  Feb 23, 2017 
+
+23-2017
+
+02-23-2017
+*/
+
+datenumbers = enterdate.substring(4,enterdate.length);
+
+datenumberswithoutcomma = datenumbers.replace(',','-');
+
+/* 23- 2017 -> datenumberswithoutcomma */
+
+prefinaldate = monthnumber+"-"+datenumberswithoutcomma;
+
+/* 02-23- 2017 */
+
+finaldate=prefinaldate.replace(' ', '');
+// console.log(finaldate);
+
+// need to convert this into year - month -day
+
+compatiblemonth = finaldate.substring(0,2);
+console.log(compatiblemonth);
+compatibleday = finaldate.substring(3,5);
+console.log(compatibleday);
+compatibleyear= finaldate.substring(6,10);
+console.log(compatibleyear);
+
+finaldatecorrectformat=compatibleyear+"-"+compatiblemonth+"-"+compatibleday;
+console.log(finaldatecorrectformat);
+
+date = new Date(finaldatecorrectformat); 
+console.log(date);
+
+		/*E.g. If we pass as an argument the following string 'Feb 23, 2017'  the program should output 'Wed Feb 22 2017'
+-> convert a string to a date that's readable to the program
+
+-> find a way to reduce the date by 1, considering
+- first of month/year
+- leap years
+
+
+		*/
+	</script>
+
+</body>
+</html>
