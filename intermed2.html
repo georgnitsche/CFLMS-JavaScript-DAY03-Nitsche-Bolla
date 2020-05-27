@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+	math = parseInt(window.prompt ("Enter Math grade"));
+	physics = parseInt(window.prompt ("Enter Physics grade"));
+	english = parseInt(window.prompt ("Enter English grade"));
+
+	function sumaverage()
+	{
+		sum = math+physics+english;
+		average = (math+physics+english)/3;
+		return[sum, average];
+	}
+
+var summe = sumaverage()[0];
+var durchschnitt = sumaverage()[1];
+document.write("The sum of the grades is "+summe+" and the average of the grades is "+durchschnitt)
+
+
+</script>
+</body>
+</html>
